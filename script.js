@@ -1,3 +1,4 @@
 document.getElementById('myButton').addEventListener('click', function() {
-    alert('Button was clicked!');
+    document.getElementById('myVideo').classList.remove("hide");
+    document.getElementById('myVideo').play();
 });
