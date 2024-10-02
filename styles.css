@@ -1,32 +1,59 @@
+:root {
+    --background-colour: #ffffff;
+    --text-colour: #1B2021;
+    --button-text-colour:#1B2021;
+    --primary-colour: #A6A867;
+    --secondary-colour: #51513D;
+    --tertiary-colour: #E3DCC2;
+    --quaternary-colour: #E3DC95;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+    --background-colour: #1B2021;
+    --text-colour: #ffffff;
+    --button-text-colour:#1B2021;
+    --primary-colour: #51513D;
+    --secondary-colour: #A6A867;
+    --tertiary-colour: #E3DCC2;
+    --quaternary-colour: #E3DC95;
+    }
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
+    background-color: var(--background-colour);
     height: 100vh;
     width: 70%;
     padding-left: 3rem;
     padding-top: 1rem;
     text-align: left;
+    transition: background-color 0.3s ease;
 }
 
 h1 {
-    color: #333;
+    color: var(--text-colour);
+    transition: color 0.3s ease;
 }
 
 p {
-    color: #666;
+    color: var(--text-colour);
+    transition: color 0.3s ease;
 }
 
 button {
     padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
+    background-color: var(--primary-colour);
+    color: var(--button-text-colour);
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: var(--secondary-colour);
+    transition: background-color 0.3s ease;
 }
 
 .hide {
