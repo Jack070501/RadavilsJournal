@@ -4,16 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
 </head>
 <body>
-    <h1>About this project</h1>
-    <h2>Overview</h2>
-        <p>This project is to help me brush up on my basic javascript,html and css skills to consolidate any learning I have done in the past couple of years. It will be a playground for me to try different ideas and different ways of developing funtionality.</p>
-        <p>I have used vanilla javascript for this project and have mostly created all of the content myself, although AI generated conent has been used sparingly.</p>
-    <h2>Features worked on in this project</h2>
-        <h3>Theme switcher</h3>
-            <p>I have added a light and dark mode to the site set by the users preferences. The user can change this with the toggle in the navigation menu.</p>
-    <script src="script.js"></script>
+    <!-- side navigation menu -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="https://jack070501.github.io/RadavilsJournal/">Cover Page</a>
+        <a href="https://jack070501.github.io/RadavilsJournal/dream-log.html">Dream Log</a>
+        <a href="https://jack070501.github.io/RadavilsJournal/about.html">About</a>
+    </div> 
+    <span onclick="openNav()">open</span>     
+    <!-- page content-->
+    <div id="main">
+        <h1>About this project</h1>
+        <h2>Overview</h2>
+            <p>This project is to help me brush up on my basic javascript,html and css skills to consolidate any learning I have done in the past couple of years. It will be a playground for me to try different ideas and different ways of developing funtionality.</p>
+            <p>I have used vanilla javascript for this project and have mostly created all of the content myself, although AI generated conent has been used sparingly.</p>
+        <h2>Features worked on in this project</h2>
+            <h3>Theme switcher</h3>
+                <p>I have added a light and dark mode to the site set by the users preferences. The user can change this with the toggle in the navigation menu.</p>
+            
+    </div>    
 </body>
 </html>

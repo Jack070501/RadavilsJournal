@@ -1,73 +1,132 @@
 :root {
-    --background-colour: #ffffff;
-    --text-colour: #1B2021;
-    --button-text-colour:#1B2021;
-    --button-background-colour:#A6A867;
-    --button-hover-colour:#E3DCC2;
-    
+  --background-colour: #ffffff;
+  --text-colour: #1B2021;
+  --button-text-colour:#1B2021;
+  --button-background-colour:#A6A867;
+  --button-hover-colour:#E3DCC2;
+
+  --sidenav-background-colour: #51513D;
+  --sidenav-text-colour: #E3DCC2;
+  --sidenav-hover-colour: #464631;
 
 
-
-    --primary-colour: #A6A867;
-    --secondary-colour: #51513D;
-    --tertiary-colour: #E3DCC2;
-    --quaternary-colour: #E3DC95;
+  --primary-colour: #A6A867;
+  --secondary-colour: #51513D;
+  --tertiary-colour: #E3DCC2;
+  --quaternary-colour: #E3DC95;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-    --background-colour: #1B2021;
-    --text-colour: #ffffff;
-    --button-text-colour:#1B2021;
-    --button-background-colour:#E3DCC2;
-    --button-hover-colour:#51513D;
+  :root {
+  --background-colour: #1B2021;
+  --text-colour: #ffffff;
+  --button-text-colour:#1B2021;
+  --button-background-colour:#E3DCC2;
+  --button-hover-colour:#51513D;
 
+  --sidenav-background-colour: #51513D;
+  --sidenav-text-colour: #E3DCC2;
+  --sidenav-text-hover-colour: #e8deb9;
 
-
-    --primary-colour: #51513D;
-    --secondary-colour: #A6A867;
-    --tertiary-colour: #E3DCC2;
-    --quaternary-colour: #E3DC95;
-    }
+  --primary-colour: #51513D;
+  --secondary-colour: #A6A867;
+  --tertiary-colour: #E3DCC2;
+  --quaternary-colour: #E3DC95;
+  }
 }
 
 h1 {
-    color: var(--text-colour);
-    transition: color 0.3s ease;
+  color: var(--text-colour);
+  transition: color 0.3s ease;
 }
 
 h2 {
-    color: var(--text-colour);
-    transition: color 0.3s ease;
+  color: var(--text-colour);
+  transition: color 0.3s ease;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: var(--background-colour);
-    height: 100vh;
-    width: 70%;
-    padding-left: 3rem;
-    padding-top: 1rem;
-    text-align: left;
-    color: var(--text-colour);
-    transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-colour);
+  padding-left: 3rem;
+  padding-top: 1rem;
+  text-align: left;
+  color: var(--text-colour);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: var(--button-background-colour);
-    color: var(--button-text-colour);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 10px 20px;
+  background-color: var(--button-background-colour);
+  color: var(--button-text-colour);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
-    background-color: var(--button-hover-colour);
-    transition: background-color 0.3s ease;
+  background-color: var(--button-hover-colour);
+  transition: background-color 0.3s ease;
+}
+
+img{
+  display: block;
 }
 
 .hide {
-    display: none;
+  display: none;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-color: var(--sidenav-background-colour); 
+  overflow-x: hidden; 
+  padding-top: 3.75rem;
+  transition: 0.5s;
+}
+
+.sidenav a {
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  text-decoration: none;
+  color: var(--sidenav-text-colour);
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  background-color: var(--sidenav-hover-colour);
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 1.5625rem;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.creepy {
+  font-family: Garamond, "Times New Roman", serif;
+  color: var(--text-colour);
+  transition: color 0.3s ease;
 }
